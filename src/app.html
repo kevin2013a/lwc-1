@@ -1,0 +1,42 @@
+<template>
+
+	<lightning-card title="Calculadora" icon-name="calculator">
+		<div class="main">
+			<div class="slds-m-around_medium">
+				<lightning-input type="number" label="Digite o primeiro número" name="n1" onchange={handleInputChange}>
+				</lightning-input>
+				<lightning-input type="number" label="Digite o segundo número" name="n2" onchange={handleInputChange}>
+				</lightning-input>
+			</div>
+			<div class="botoes">
+
+				<div class="operacoes">
+					<p>
+						<lightning-button variant='brand' label='+' onclick={handleOnClickSum}></lightning-button>
+					</p>
+					<p>
+						<lightning-button variant='brand' label='-' onclick={handleOnClickSub}></lightning-button>
+					</p>
+					<p>
+						<lightning-button variant='brand' label='/' onclick={handleOnClickDiv}></lightning-button>
+					</p>
+					<p>
+						<lightning-button variant='brand' label='*' onclick={handleOnClickMul}></lightning-button>
+					</p>
+				</div>
+				<div class="finalActions">
+					<p>
+						<lightning-button label='Limpar' onclick={handleReset}></lightning-button>
+					</p>
+					<p>
+						<lightning-button variant='brand' label='Resultado' onclick={showResult}></lightning-button>
+					</p>
+				</div>
+			</div>
+		</div>
+		<template if:true={visivel}>
+			Resultado: {result}
+		</template>
+	</lightning-card>
+
+</template>

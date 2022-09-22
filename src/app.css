@@ -1,0 +1,24 @@
+h1 {
+    color: rgb(0, 112, 210);
+}
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(62, 62, 60);
+     margin: 10px;
+}
+
+.botoes{
+margin: 10px;
+display: flex;
+justify-content: space-between;
+}
+
+.operacoes{
+    display: flex;
+}
+
+.finalActions{
+    display: flex;
+}
+
+
